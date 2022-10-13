@@ -1,0 +1,376 @@
+/**
+*
+* ----------------------------------------------------------
+*
+* Template : 
+* Author : 
+* Author URI : 
+*
+* ----------------------------------------------------------
+*
+**/
+
+/* Table Of Content
+---------------------------------------------------------
+00. Global CSS
+01. Suggested Alarms
+02. How it Works
+03. Global Holidays
+
+
+--------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* -----------------------------------
+    01. General CSS
+-------------------------------------*/
+
+html,
+body {
+  font-size: 18px;
+  line-height: 1.6em;
+  color: #514d4d;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background: #ffffff;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+p {
+  margin: 0 0 16px;
+  line-height: 1.6em;
+  margin-bottom: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #001A38;
+  margin: 0 0 26px;
+}
+h1 {
+  font-size: 42px;
+  line-height: 1.45em;
+  margin-bottom: 30px;
+}
+h2 {
+  font-size: 45px;
+  line-height: 1.27em;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 1.6em;
+  margin-bottom: 15px;
+}
+h4 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 600;
+}
+h5 {
+  font-size: 18px;
+  line-height: 1em;
+  margin-bottom: 0;
+}
+h6 {
+  font-size: 16px;
+  line-height: 1.4em;
+  margin-bottom: 10px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  transition: all 0.3s ease 0s;
+  outline: none !important;
+  text-decoration: none !important;
+}
+a:active,
+a:hover {
+  text-decoration: none;
+  outline: 0 none;
+}
+strong {
+    font-weight: 700;
+}
+
+
+/* -----------------------------------
+  00. Global CSS
+-------------------------------------*/
+.section--wrapp 
+{
+  padding: 100px 0;
+}
+.sec--heading h2
+{
+  font-size: 45px;
+  font-weight: 700;
+  color: #26ABE2;
+}
+.sec--heading p
+{
+  font-size: 20px;
+  color: #444444;
+  font-weight: 600;
+}
+
+/* content--wrapp--box */
+.content--wrapp--box
+{
+  box-shadow: 8px 8px 30px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  margin-top: 40px;
+  border: 1px solid #baebff;
+}
+.content--inner--box
+{
+  background: #FFF;
+  box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 10%);  
+  padding: 60px 40px;
+}
+
+.border--radius 
+{
+  border-radius: 20px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #6d6d6d; 
+}
+
+
+
+/* -----------------------------------
+  02. How it Works
+-------------------------------------*/
+
+.how--it--works .content--main-boxs 
+{
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.how--it--works .content--main-boxs .box 
+{
+  margin: 15px;
+  width: 30%;
+  padding: 20px;
+  background-color: #26ABE2;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.how--it--works .content--main-boxs .box h2
+{
+  color: #26ABE2;
+  background-color: #FFFFFF;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  font-size: 55px;
+  line-height: 100px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -70px;
+  box-shadow: 0px 10px 0 rgb(0 0 0 / 10%);
+  margin-bottom: 50px;
+}
+.how--it--works .content--main-boxs .box h4
+{
+  font-size: 20px;
+  font-weight: 600;
+}
+.how--it--works .content--main-boxs .box p 
+{
+  font-size: 15px;
+  font-weight: 400;
+}
+.how--it--works .content--main-boxs .box h4, .how--it--works .content--main-boxs .box p 
+{
+  color: #FFFFFF;
+}
+
+
+/* -----------------------------------
+  03. Hero Page Banner
+-------------------------------------*/
+.hero--page--banner 
+{
+  padding: 100px 0 300px;
+  background-image: url('../images/banner-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+.hero--page--banner::after{
+  position: absolute;
+  content: '';
+  background-color: #26ABE2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+  z-index: -1;
+}
+
+.hero--page--banner h2 
+{
+  font-size: 60px;
+  color: #FFFFff;
+  font-weight: 700;
+}
+
+.hero--page--banner p 
+{
+  font-size: 26px;
+  color: #FFFFff;
+  font-weight: 400;
+}
+.hero--page--banner .sec--heading h2, .hero--page--banner .sec--heading p
+{
+  z-index: 10;
+}
+
+
+/* -----------------------------------
+  03. Global Holidays
+-------------------------------------*/
+.global--holidays
+{
+  margin-top: -230px;
+  position: relative;
+  z-index: 20;
+}
+.global--holidays .content--wrapp--box {
+  box-shadow: 0 -10px 60px rgb(0 0 0 / 10%);
+  background: rgb(238 238 238 / 53%);
+}
+.global--holidays .content--wrapp--box table tr th
+{
+  font-size: 20px;
+  color: #26ABE2;
+  font-weight: 600;
+
+}
+.global--holidays .content--wrapp--box table td
+{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+
+/* -----------------------------------
+  01. Suggested Alarms
+-------------------------------------*/
+.suggested--alarms .content--main 
+{
+  height: 384px;
+  overflow: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.content--main a 
+{
+  border: 2px solid #D9F4FF;
+  padding: 12px 27px;
+  border-radius: 6px;
+  text-align: center;
+}
+.content--main a:hover{
+  background-color: #D9F4FF;
+}
+.suggest--btn {
+  color: #707070;
+  background: transparent;
+  margin: 10px;
+  width: 14%;
+}
+
+/* -----------------------------------
+  02. How it Works
+-------------------------------------*/
+
+.how--it--works .content--main-boxs 
+{
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.how--it--works .content--main-boxs .box 
+{
+  margin: 15px;
+  width: 30%;
+  padding: 20px;
+  background-color: #26ABE2;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.how--it--works .content--main-boxs .box h2
+{
+  color: #26ABE2;
+  background-color: #FFFFFF;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  font-size: 55px;
+  line-height: 100px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: -70px;
+  box-shadow: 0px 10px 0 rgb(0 0 0 / 10%);
+  margin-bottom: 50px;
+}
+.how--it--works .content--main-boxs .box h4
+{
+  font-size: 20px;
+  font-weight: 600;
+}
+.how--it--works .content--main-boxs .box p 
+{
+  font-size: 15px;
+  font-weight: 400;
+}
+.how--it--works .content--main-boxs .box h4, .how--it--works .content--main-boxs .box p 
+{
+  color: #FFFFFF;
+}
+
