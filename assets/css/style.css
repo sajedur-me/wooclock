@@ -102,7 +102,13 @@ strong {
     font-weight: 700;
 }
 
+textarea:focus, input:focus{
+  outline: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 
+}
 /* -----------------------------------
   00. Global CSS
 -------------------------------------*/
@@ -159,7 +165,12 @@ strong {
   border-radius: 10px;
   background: #26ABE2; 
 }
-
+.bg--default
+{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /* -----------------------------------
   03. Hero Page Banner
@@ -168,9 +179,6 @@ strong {
 {
   padding: 100px 0 300px;
   background-image: url('../images/banner-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
   z-index: 1;
 }
@@ -303,7 +311,7 @@ strong {
   z-index: 20;
   padding-bottom: 150px;
 }
-.global--holidays .content--wrapp--box {
+.global--after--sec .content--wrapp--box {
   box-shadow: 0 -10px 60px rgb(0 0 0 / 10%);
   background: rgb(238 238 238 / 53%);
 }
@@ -332,12 +340,11 @@ strong {
 -------------------------------------*/
 .global--converter .content--inner--box 
 {
-
+  background-color: #26ABE2;
 }
 .digital--clock 
 {
-  background-color: #001A38;
-  border: 1px solid #26ABE2;
+  border: 1px solid #EEEEEE;
   padding: 30px;
   color: #FFF;
   position: relative;
@@ -376,7 +383,7 @@ strong {
   top: 7px;
   right: 5px;
   list-style: none;
-  background-color: #444444;
+  background-color: #26ABE2;
   padding: 10px 20px;
   border-radius: 5px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
@@ -434,6 +441,27 @@ strong {
   background-color: #26ABE2;
   box-shadow: 0 5px 25px #26ABE2;
   transform: translateX(10px);
+}
+.time--format--input 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0 0;
+  color: #FFFFFF;
+}
+.input--item 
+{
+  margin: 0 50px;
+}
+.input--item input 
+{
+  padding: 12px 15px;
+  width: 350px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  border: 0px solid;
+  color: #26ABE2;
 }
 
 

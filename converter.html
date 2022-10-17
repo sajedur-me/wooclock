@@ -25,11 +25,11 @@
 </section>
 
 <!-- Hero Page Banner -->
-    <section class="hero--page--banner banner">
+    <section class="hero--page--banner banner bg--default">
         <div class="container">
             <div class="sec--heading text-center">
-                <h2>Upcoming Global Holidays</h2>
-                <p>Upcoming Global Holidays Simple 5 steps.</p>
+                <h2>Time Format Converter</h2>
+                <p>Upcoming Global converter steps.</p>
             </div>
         </div>
     </section>
@@ -41,7 +41,7 @@
             <div class="content--wrapp--box border--radius">
                 <div class="content--inner--box border--radius">
                   
-                  <div class="digital--clock">
+                  <div class="digital--clock bg--default">
                     <i class="uil uil-ellipsis-v dot-menu-btn "></i>
                     <ul class="dot--menu " id="active_menu">
                       <li class="menu--item ">
@@ -63,6 +63,17 @@
                       <span class="day--name">Sunday</span>
                       <span class="day--number">6</span>
                       <span class="year">2022</span>
+                    </div>
+                  </div>
+
+                  <div class="time--format--input">
+                    <div class="input--item">
+                      <p><label for="24Hours">Time in 24 hour Format</label></p>
+                      <input type="text" id="24Hours" class="twentyfour" placeholder="21:00" value="21:00">
+                    </div>
+                    <div class="input--item">
+                      <p><label for="12Hours">Time in 12 hour Format</label></p>
+                      <input type="text" id="12Hours" class="twelve" placeholder="9:00 PM">
                     </div>
                   </div>
                 </div>
@@ -119,6 +130,10 @@
         document.querySelector(".minutes").innerHTML = minutes;
         document.querySelector(".seconds").innerHTML = seconds;
         document.querySelector(".preiod").innerHTML = preiod;
+
+        var twentyFour = document.querySelector(".twentyfour");
+
+
       }
 
       var updateClock = setInterval(clock, 500);
