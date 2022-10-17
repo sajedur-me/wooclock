@@ -437,3 +437,10 @@ strong {
 }
 
 
+.header {
+  padding: 20px 0;
+  color: #000000;
+}
+.header a {
+  margin-right: 15px;
+}
