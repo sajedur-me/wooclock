@@ -149,7 +149,7 @@ strong {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #ebebeb;
+  background-color: #D9F4FF;
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
@@ -157,64 +157,7 @@ strong {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: #6d6d6d; 
-}
-
-
-
-/* -----------------------------------
-  02. How it Works
--------------------------------------*/
-
-.how--it--works .content--main-boxs 
-{
-  background: #fff;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-}
-
-.how--it--works .content--main-boxs .box 
-{
-  margin: 15px;
-  width: 30%;
-  padding: 20px;
-  background-color: #26ABE2;
-  border-radius: 10px;
-  margin-bottom: 40px;
-  margin-top: 40px;
-}
-.how--it--works .content--main-boxs .box h2
-{
-  color: #26ABE2;
-  background-color: #FFFFFF;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  font-size: 55px;
-  line-height: 100px;
-  font-weight: 700;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: -70px;
-  box-shadow: 0px 10px 0 rgb(0 0 0 / 10%);
-  margin-bottom: 50px;
-}
-.how--it--works .content--main-boxs .box h4
-{
-  font-size: 20px;
-  font-weight: 600;
-}
-.how--it--works .content--main-boxs .box p 
-{
-  font-size: 15px;
-  font-weight: 400;
-}
-.how--it--works .content--main-boxs .box h4, .how--it--works .content--main-boxs .box p 
-{
-  color: #FFFFFF;
+  background: #26ABE2; 
 }
 
 
@@ -263,33 +206,6 @@ strong {
 
 
 /* -----------------------------------
-  03. Global Holidays
--------------------------------------*/
-.global--holidays
-{
-  margin-top: -230px;
-  position: relative;
-  z-index: 20;
-}
-.global--holidays .content--wrapp--box {
-  box-shadow: 0 -10px 60px rgb(0 0 0 / 10%);
-  background: rgb(238 238 238 / 53%);
-}
-.global--holidays .content--wrapp--box table tr th
-{
-  font-size: 20px;
-  color: #26ABE2;
-  font-weight: 600;
-
-}
-.global--holidays .content--wrapp--box table td
-{
-  font-size: 16px;
-  font-weight: 400;
-}
-
-
-/* -----------------------------------
   01. Suggested Alarms
 -------------------------------------*/
 .suggested--alarms .content--main 
@@ -318,6 +234,8 @@ strong {
   margin: 10px;
   width: 14%;
 }
+
+
 
 /* -----------------------------------
   02. How it Works
@@ -373,4 +291,149 @@ strong {
 {
   color: #FFFFFF;
 }
+
+
+/* -----------------------------------
+  03. Global Holidays Page
+-------------------------------------*/
+.global--after--sec
+{
+  margin-top: -230px;
+  position: relative;
+  z-index: 20;
+  padding-bottom: 150px;
+}
+.global--holidays .content--wrapp--box {
+  box-shadow: 0 -10px 60px rgb(0 0 0 / 10%);
+  background: rgb(238 238 238 / 53%);
+}
+.global--holidays .content--wrapp--box table tr th
+{
+  font-size: 20px;
+  color: #26ABE2;
+  font-weight: 600;
+
+}
+.global--holidays .content--wrapp--box table tr {
+  border-bottom-color: #D9F4FF;
+}
+.global--holidays .content--wrapp--box table td
+{
+  font-size: 16px;
+  font-weight: 400;
+}
+.table-hover>tbody>tr:hover>* {
+  --bs-table-accent-bg: #D9F4FF;
+  color: #26ABE2;
+}
+
+/* -----------------------------------
+  02. Converter Page
+-------------------------------------*/
+.global--converter .content--inner--box 
+{
+
+}
+.digital--clock 
+{
+  background-color: #001A38;
+  border: 1px solid #26ABE2;
+  padding: 30px;
+  color: #FFF;
+  position: relative;
+  border-radius: 10px;
+}
+.digital--clock .time 
+{
+  display: flex;
+  align-items: center;
+  font-size: 50px;
+}
+.digital--clock .time .right--side 
+{
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  line-height: 24px;
+}
+
+.dot-menu-btn
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  cursor: pointer;
+
+}
+.dot--menu 
+{
+  z-index: 999;
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  list-style: none;
+  background-color: #444444;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.dot--menu.active 
+{
+  visibility: visible;
+  opacity: 1;
+  margin-right: 40px;
+}
+.menu--item
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock--format--text
+{
+  color: #FFF;
+  font: 0.9em;
+  margin-right: 20px;
+}
+.format--switch--btn
+{
+  width: 35px;
+  height: 15px;
+  background-color: #001A38;
+  border-radius: 75px;
+  box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+              inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.format--switch--btn:before 
+{
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 5px 25px #FFFFFF;
+  transform: translateX(-10px);
+  transition: 0.3s ease;
+  transition-property: background, transform;
+}
+
+.format--switch--btn.active:before
+{
+  background-color: #26ABE2;
+  box-shadow: 0 5px 25px #26ABE2;
+  transform: translateX(10px);
+}
+
 
