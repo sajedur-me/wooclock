@@ -487,6 +487,12 @@ textarea:focus, input:focus{
   padding: 20px 0;
   color: #000000;
 }
+header ul 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .header a {
   margin-right: 15px;
 }
