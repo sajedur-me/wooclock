@@ -35,144 +35,79 @@
     <section class="hero--page--banner banner bg--default">
         <div class="container">
             <div class="sec--heading text-center">
-                <h2>Stop Watch Time</h2>
-                <p>Upcoming Global converter steps.</p>
+                <h2>Best online stop watch</h2>
+                <p>Do not close browser tab.</p>
             </div>
         </div>
     </section>
 
 <!-- Global Holidays -->
-    <section class="global--converter global--after--sec">
-        <div class="container">
+<section class="global--timer global--after--sec">
+  <div class="container">
 
-            <div class="content--wrapp--box border--radius">
-                <div class="content--inner--box border--radius">
-                  
-                  <div class="digital--clock bg--default">
-                    <i class="uil uil-ellipsis-v dot-menu-btn "></i>
-                    <ul class="dot--menu " id="active_menu">
-                      <li class="menu--item ">
-                        <span class="clock--format--text " ><span class="format">12</span>-hour format</span>
-                        <span class="format--switch--btn " data-format="12"></span>
-                      </li>
-                    </ul>
-                    <div class="time">
-                      <span class="hours">00</span>
-                      <span class="dots">:</span>
-                      <span class="minutes">00</span>
-                      <div class="right--side">
-                        <span class="preiod">AM/PM</span>
-                        <span class="seconds">00</span>
-                      </div>
-                    </div>
-                    <div class="calendar">
-                      <span class="month--name">May</span>,
-                      <span class="day--name">Sunday</span>
-                      <span class="day--number">6</span>
-                      <span class="year">2022</span>
-                    </div>
-                  </div>
-
-                  <div class="time--format--input">
-                    <div class="input--item">
-                      <p><label for="24Hours">Time in 24 hour Format</label></p>
-                      <input type="text" id="24Hours" class="twentyfour" placeholder="21:00" value="21:00">
-                    </div>
-                    <div class="input--item">
-                      <p><label for="12Hours">Time in 12 hour Format</label></p>
-                      <input type="text" id="12Hours" class="twelve" placeholder="9:00 PM">
-                    </div>
-                  </div>
-                </div>
+      <div class="content--wrapp--box border--radius">
+          <div class="content--inner--box border--radius text-center">
+            <div class="timer--div">
+              <span class="hours">00</span>
+              <span class="dots">:</span>
+              <span class="minutes">00</span>
+              <span class="dots">:</span>
+              <span class="secounds">00</span>
             </div>
-            
-        </div>
-    </section>
+            <div class="set--timer--btn">
+              <button class="timer--btn">START</button>
+              <button class="timer--btn">STOP</button>
+              <button class="timer--btn">RESET</button>
+            </div>
+          </div>
+      </div>
+      
+  </div>
+</section>
+<!-- How it works -->
+<section class="how--it--works section--wrapp">
+  <div class="container">
+      <div class="sec--heading text-center">
+          <h2>How it works</h2>
+          <p>Simple 3 steps.</p>
+      </div>
 
-    <script>
-      //Javascript for switch clock format
-      const formatSwitchBtn = document.querySelector(".format--switch--btn");
-      formatSwitchBtn.addEventListener("click", () => {
-        formatSwitchBtn.classList.toggle("active");
+      <div class="content--wrapp--box border--radius">
+          <div class="content--inner--box border--radius">
 
-        var formatValue = formatSwitchBtn.getAttribute("data-format");
-        if( formatValue === "12" ) {
-          formatSwitchBtn.setAttribute("data-format", "24");
-        }else {
-          formatSwitchBtn.setAttribute("data-format", "12");
-        }
+              <div class="content--main-boxs">
 
-        var formatHours = document.querySelector(".format").innerHTML = formatSwitchBtn.getAttribute("data-format");
-      });
+                  <div class="box">
+                      <h2>1</h2>
+                      <div class="box-desc">
+                          <h4>Click on the “Set Alarm” button</h4>
+                          <p>Once you have reached this stage, the rest is straightforward. 
+                              Simply click on the “Set Alarm” button and a prompt will appear.</p>
+                      </div>
+                  </div>
+                  <div class="box">
+                      <h2>2</h2>
+                      <div class="box-desc">
+                          <h4>Set the exact time</h4>
+                          <p>Set the exact time – down to the minute - for the alarm to go off.</p>
+                      </div>
+                  </div>
+                  <div class="box">
+                      <h2>3</h2>
+                      <div class="box-desc">
+                          <h4>Select the alarm ring from the list</h4>
+                          <p>Select the alarm ring of your choice. You will witness a variety of exciting options here.</p>
+                      </div>
+                  </div>
 
-      function clock() {
-        var today = new Date();
+              </div>
 
-        var hours = today.getHours();
-        var minutes = today.getMinutes();
-        var seconds = today.getSeconds();
-        let preiod = "AM";
+          </div>
+      </div>
+      
+  </div>
+</section>
 
-        //Set the 12-hours clock format
-        if(hours >= 12) {
-          preiod = "PM"
-        }
-        var formatValue = formatSwitchBtn.getAttribute("data-format");        
-        if( formatValue === "12" ) {
-          hours = hours > 12 ? hours % 12 : hours;
-        }
-
-        // //Add the 0 for the values lower then 10
-        if( hours < 10 ) {
-          hours = "0" + hours;
-        }
-        if( minutes < 10 ) {
-          minutes = "0" + minutes;
-        }
-        if( seconds < 10 ) {
-          seconds = "0" + seconds;
-        }
-
-        document.querySelector(".hours").innerHTML = hours;
-        document.querySelector(".minutes").innerHTML = minutes;
-        document.querySelector(".seconds").innerHTML = seconds;
-        document.querySelector(".preiod").innerHTML = preiod;
-
-        var twentyFour = document.querySelector(".twentyfour");
-
-
-      }
-
-      var updateClock = setInterval(clock, 500);
-
-      //Get the date in Javascript
-      var today = new Date();
-      const monthName = today.toLocaleString("default", {month: "short"});
-      const dayName = today.toLocaleString("default", {weekday: "long"});
-      const dayNumber = today.getDate();
-      const year = today.getFullYear();
-
-      document.querySelector(".month--name").innerHTML = monthName;
-      document.querySelector(".day--name").innerHTML = dayName;
-      document.querySelector(".day--number").innerHTML = dayNumber;
-      document.querySelector(".year").innerHTML = year;
-
-
-      //Javascript for dot menu toggle
-      const dotMenuBtn = document.querySelector(".dot-menu-btn");
-      const dotMenu = document.querySelector(".dot--menu");
-
-      dotMenuBtn.addEventListener("click", () => {
-        dotMenu.classList.toggle("active");
-      });
-      // document.addEventListener("click", () => {
-      //   if( e.target.id !== "active_menu" ) {
-      //     dotMenu.classList.remove("active");
-      //   }
-      // });
-
-
-    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
